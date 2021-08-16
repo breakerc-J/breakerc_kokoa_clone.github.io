@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Open+Sans:wght@400;600&display=swap");
+
+@import "reset.css";
+@import "variables.css";
+
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-components.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/alt-header.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+.link {
+  text-decoration: none;
+}
+
+@keyframes hideSplashScreen {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  will-change: opacity;
+  animation: hideSplashScreen 1s ease-in-out forwards;
+  z-index: 2;
+}
+
+.splash-screen i {
+  font-size: 132px;
+  color: #3c1e1e;
+}
